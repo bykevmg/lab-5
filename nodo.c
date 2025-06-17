@@ -74,3 +74,44 @@ void insertarPrimero(struct Persona p){
     }
     
 }
+
+
+
+
+void imprimeInicioAFin(){
+    
+    if (primero == NULL){
+        printf("La lista está vacía\n");
+        return;
+        
+        
+    }
+    struct Nodo* actual = primero;
+    
+    while (actual != NULL) {
+        
+        imprimirPersona( *(actual->p) );  
+        actual = actual->siguiente;
+        
+        
+    }
+}
+
+
+void imprimerFinAInicio(){
+    
+    if (primero == NULL){
+        printf("La lista está vacía\n");
+        return;
+        
+    }
+    
+     struct Nodo* actual = ultimo;
+     
+     while(actual != NULL){
+         imprimirPersona( *(actual->p) );
+         actual = actual->anterior;
+     }
+    
+    
+}
